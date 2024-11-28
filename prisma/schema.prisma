@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Type {
+  TRUTH
+  CHALLENGE
+}
+
+model Card {
+  id      String @id @default(uuid())
+  type    Type   @default(TRUTH)
+  message String
+}
+
+model Player {
+  id   String @id @default(uuid())
+  name String
+}

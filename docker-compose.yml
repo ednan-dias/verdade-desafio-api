@@ -1,0 +1,9 @@
+services:
+  verdade-desafio-db:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=root
+      - POSTGRESQL_PASSWORD=19303496
+      - POSTGRESQL_DATABASE=verdade_desafio
